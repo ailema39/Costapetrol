@@ -27,6 +27,14 @@
 jQuery(function($) {
   "use strict";
  $.noConflict();
+ $('.navigation').singlePageNav({
+currentClass: 'active',
+changeHash: true,
+scrollSpeed: 750,
+offset: 0,
+filter: ':not(.external)',
+easing: 'swing',
+});
      $('.nav a').on('click', function(){ 
         if($('.navbar-toggle').css('display') !='none'){
             $(".navbar-toggle").trigger( "click" );
@@ -37,6 +45,7 @@ jQuery(function($) {
 //  Navigation scrolling
 
       $('a.page-scroll').click(function() {
+          return false;
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
