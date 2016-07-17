@@ -361,7 +361,7 @@ ul.navbar-nav > .active > a{
     -webkit-transition: all.3s ease 0s;
     -o-transition: all.3s ease 0s;
     transition: all.3s ease 0s;
-    text-align: center;
+    text-align: left;
 }
 .carousel-caption h3{
     text-shadow:none;
@@ -898,6 +898,9 @@ padding: 8px 15px;
 }
 /*About Us
 ===================================*/
+/*#about {
+    background: url('../images/about/plataforma_nosotros.JPG')fixed 50% 50%;
+}*/
 .nav-tabs {
     border-bottom:0px;
 }
@@ -1564,9 +1567,9 @@ padding: 8px 15px;
     padding: 30px 0px;  
 }
 
-#client h3.feature_title {
+/*#client h3.feature_title {
     color: #fff !important;
-}
+}*/
 .client-carousel .owl-controls {
     margin: 70px 0px;
     display: none !important;
@@ -1634,6 +1637,10 @@ padding: 8px 15px;
  .contact_full .btn-main{
     margin-top: 20px;
  }
+ 
+ .contact_full h4 {
+    color: #555;
+ }
 /*/right*/
 
 .left h4,.right h4{
@@ -1696,22 +1703,22 @@ padding: 8px 15px;
 
 .form-level ::-webkit-input-placeholder {
    color: #555;
-   text-transform: capitalize;
+   /*text-transform: capitalize;*/
 }
 
 .form-level :-moz-placeholder { /* Firefox 18- */
    color: #555;  
-   text-transform: capitalize;
+   /*text-transform: capitalize;*/
 }
 
 .form-level ::-moz-placeholder {  /* Firefox 19+ */
    color: #555;  
-   text-transform: capitalize;
+   /*text-transform: capitalize;*/
 }
 
 .form-level :-ms-input-placeholder {  
    color: #555;  
-   text-transform: capitalize;
+   /*text-transform: capitalize;*/
 }
 /* Footer Area
 ==========================================*/
@@ -2576,6 +2583,10 @@ iframe{
 }
 #about-details {
     background: url('../images/banner/banner.jpg')fixed 50% 50%;
+}
+
+#about-details h4 {
+    color: white;
 }
 
 .single-progress .progress{
