@@ -771,7 +771,7 @@
                             </div>
                         </div>
                         <h3>Omar Freites</h3>
-                        <h5>Gerente de Ingenier&iacute;a (CIO)</h5>
+                        <h5>Gerente de Ingenier&iacute;a (PEM)</h5>
                     </div>
                 </div>  <!-- item wrapper end -->
                 <div class="item text-center">
@@ -826,27 +826,35 @@
                 </div>
                 <div class="col-md-6 right">
                     <div class="left_contact">
-                        <form action="role">
-                            <div class="form-level">
-                                <input name="name" placeholder="Nombre y apellido" id="name"  value="" type="text" class="input-block"/>
+                        <form data-toggle="validator" method="post" action="form.php" class="aSubmit">
+                            <div style="display:none"><input type="text" name="maximus" value=""/></div>
+                            <input type="hidden" name="theSubject" value="Nuevo Mensaje"/>
+                            <div class="form-level form-group">
+                                <input type="text" placeholder="Nombre y apellido*" aria-invalid="false" aria-required="true" size="40" value="" name="Nombre" class="input-block" required/>
                                 <span class="form-icon fa fa-user"></span>
                             </div>
-                            <div class="form-level">
-                                <input name="email" placeholder="E-mail" id="mail" class="input-block" value="" type="email"/>
+                            <div class="form-level form-group">
+                                <input type="email" placeholder="E-mail*" aria-invalid="false" aria-required="true" size="40" value="" name="Email" class="input-block" required/>
                                 <span class="form-icon fa fa-envelope-o"></span>
                             </div>
-                            <div class="form-level">
-                                <input name="name" placeholder="Tel&eacute;fono" id="phone" class="input-block" value="" type="text"/>
+                            <div class="form-level form-group">
+                                <input type="tel" placeholder="Tel&eacute;fono" aria-invalid="false" aria-required="true" size="40" value="" name="Telefono" class="input-block"/>
                                 <span class="form-icon fa fa-phone"></span>
                             </div>
+                            <div class="form-level form-group">
+                                <textarea placeholder="Mensaje*" aria-invalid="false" rows="5" cols="40" name="Mensaje" class="textarea-block" required></textarea>
+                                <span class="form-icon fa fa-pencil"></span>
+                            </div>
+                            <div class="form-level form-group">
+                                <div class="g-recaptcha" data-sitekey="6LdLlCUTAAAAAJVst7IyGVEH87KM3AaW7ZsHkFlX" data-callback="recaptchaCallback"></div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <input type="submit" class="btn btn-main featured" value="Enviar"/>
+                                <img class="ajax-loader" id="loader" src="images/ajax-loader.gif" alt="Enviando ..." style="display:none;"/>
+                            </div>
+                            <div class="response success">Su mensaje fue enviado exitosamente.</div>
+		                    <div class="response error">Desafortunadamente, no hemos podido enviar el mensaje en este momento. Por favor, int&eacute;ntelo de nuevo.</div>
                         </form>
-                    </div>
-                    <div class="form-level">
-                        <textarea name="" id="messege"  rows="5" class="textarea-block" placeholder="Mensaje"></textarea>
-                        <span class="form-icon fa fa-pencil"></span>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <button class="btn btn-main featured">Enviar</button>
                     </div>
                 </div>
             </div>
@@ -1003,8 +1011,10 @@
         <script type="js/javascript" src="js/wow.min.js"></script>
         <!-- Google Map  Source -->
         <script type="text/javascript" src="js/gmaps.js"></script>
+        <script src="js/bootstrap/validator.js"></script>
 			 <!-- Custom js -->
         <script src="js/custom.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 	     <script>
 		// Google Map - with support of gmaps.js
      var map;

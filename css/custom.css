@@ -1627,6 +1627,31 @@ padding: 8px 15px;
     text-transform: capitalize!important;
     padding-left: 70px;
 }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { 
+    cursor: not-allowed; 
+    opacity: 0.65; 
+    filter: alpha(opacity=65); 
+    box-shadow: none; 
+    pointer-events: inherit;
+}
+form .response {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    display: none;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+form .response.success {
+    color: green;
+}
+form .response.error {
+    color: red;
+}
+.has-error .g-recaptcha iframe, .form-group.has-error input, .form-group.has-error textarea {
+    outline: 1px solid red;
+}
  .right textarea{
     width: 100%;
     padding: 10px 15px;

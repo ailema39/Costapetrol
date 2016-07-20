@@ -321,6 +321,54 @@ Back To Top Button
       $('#back-top').tooltip('hide');
 
 
+    /**
+	 * Quick quote form submission
+	 */
 
+	var theForm
+
+	$('form.aSubmit').validator().on('submit', function (e) {
+
+		theForm = $(this);
+
+		if (e.isDefaultPrevented()) {
+
+			if($('.g-recaptcha-response').val()==''){
+				$('.g-recaptcha').parent().addClass('has-error');
+			} else {
+				$('.g-recaptcha').parent().removeClass('has-error');
+			}
+
+		} else {
+
+			$('#loader').fadeIn();
+
+			$.ajax({
+				url: $(this).attr('action'),
+				method: 'post',
+				data: $(this).serialize()
+			}).done(function(ret){
+
+				$('#loader').fadeOut();
+
+				if( ret == "Message sent!" ) {
+
+					theForm.find('.response.success').fadeIn();
+
+				} else {
+
+					theForm.find('.response.error').fadeIn();
+
+				}
+
+				setTimeout(function(){ theForm.find('.response').fadeOut() }, 7000)
+
+			})
+
+		}
+
+		return false;
+
+	});
 
 });
