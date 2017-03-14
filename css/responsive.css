@@ -208,6 +208,9 @@
 	}
 	
 	/*header*/
+    .navbar-brand {
+        line-height: 40px;
+    }
   	.navbar-brand img {
 	    height: 45px;
 	    margin-top: -16px;
